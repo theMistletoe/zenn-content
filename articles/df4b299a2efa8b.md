@@ -23,7 +23,7 @@ URLを貼るだけで、Webサイトの**CSSを評価**してくれます。
 **Maintainability・Complexity・Performance**の3つの観点でスコアを100点満点評価してくれます。
 評価してくれるだけでなく、具体的に問題のありそうなCSSを提示して**改善方針も提示**してくれます。
 
-![]("/images/df4b299a2efa8b/1.png")
+![改善方針の様子](/images/df4b299a2efa8b/1.png)
 
 
 ## 使用例
@@ -32,21 +32,22 @@ URLを貼るだけで、Webサイトの**CSSを評価**してくれます。
 
 ### Twitter
 
-![]("/images/df4b299a2efa8b/twitter.png")
+![](/images/df4b299a2efa8b/twitter.png)
 
 シンプルさもあってか、有名なサービスながら高いスコアになっていますね！
 
 ### Amazon
 
-![]("/images/df4b299a2efa8b/amazon.png")
+![](/images/df4b299a2efa8b/amazon.png)
 
-どうしても複雑なUIなので、相対的にきちんと評価できているようです。
+どうしても複雑なUIなので、相対的に低くスコアが出ます。
+きちんと評価できているようですね。
 
 ### Memomiro(自作)
 
 [以前自作したツール「Memomiro」](https://zenn.dev/mistletoe/articles/4016f0cb753e69)のページもやってみます。
 
-![]("/images/df4b299a2efa8b/myself.png")
+![](/images/df4b299a2efa8b/myself.png)
 
 シンプル過ぎて、スコアだけだととんでもないことになってますね…
 
