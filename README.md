@@ -3,6 +3,6 @@
 * [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)
 
 ```sh
-npx zenn new:article
-npx zenn preview # プレビュー開始
+yarn zenn new:article
+yarn zenn preview # プレビュー開始
 ```
