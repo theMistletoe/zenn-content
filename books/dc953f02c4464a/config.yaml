@@ -4,11 +4,12 @@ topics: ["GitHub Copilot", "AI", "ChatGPT"]
 published: true
 price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
+# TODO: urlになるらしいのでそれらしいものにする
 chapters:
   - example1
   - example2
   - example3
-  # - example4
+  - example4
   # - example5
   # - example6
   # - example7
