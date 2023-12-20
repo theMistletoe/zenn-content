@@ -1,5 +1,5 @@
 title: "AIで誰もがサービスを作れる世界の夢を見るか？"
-summary: "GitHub Copilot/ChatGPTを使ったサービス開発"
+summary: "GitHub Copilot/ChatGPTを使って、開発技術を必要とせずサービス開発ができるのか？という内容の実験本になっております。開発におけるAI活用の参考になると思いますし、ひいてはその先のより自由な開発のための糸口になると幸いです。"
 topics: ["GitHub Copilot", "AI", "ChatGPT"]
 published: true
 price: 0 # 有料の場合200〜5000
@@ -11,8 +11,7 @@ chapters:
   - example3
   - example4
   - example5
-  # - example6
-  # - example7
-  # - example8
-  # - example9
-  - example_emplty
+  - example6
+  - example7
+  - example8
+  - example9
