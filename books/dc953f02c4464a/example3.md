@@ -17,11 +17,6 @@ title: "進め方"
 デプロイ等も考慮しません。まずはローカルで想定通りの機能実装が実現できることを確認します。
 
 
-
-:::message
-追加・拡張したアプローチについては、随時本書を更新していきます。
-:::
-
 # 基本的な進め方
 
 [GitHub Copilot Chat](https://docs.github.com/ja/copilot/github-copilot-chat/about-github-copilot-chat)に指示を出して、返答内容に従ってファイル修正やコマンド実行を行います。

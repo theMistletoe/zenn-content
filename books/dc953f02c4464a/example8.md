@@ -45,10 +45,10 @@ ChatGPTを使っていきます。
 
 返答はこちら↓
 
-```
-The image you've uploaded appears to be a screenshot of a user interface for a to-do list application. The interface is quite minimalistic, with a dark color scheme. There are three to-do items listed, with the first one marked as completed, as indicated by the blue check mark. The other two items are not checked, implying they are pending tasks. Above the list, there is an input field with a placeholder text that says "todo title...", suggesting that you can type a new to-do item title there. To the right of this input field, there's a button with a "+" sign, commonly used to add a new item to the list. The overall design is clean and modern, focusing on simplicity and ease of use.
-(あなたがアップロードした画像は、ToDoリストアプリケーションのユーザーインターフェイスのスクリーンショットのようです。インターフェイスは非常にミニマリスティックで、暗い色調でまとめられている。3つのToDo項目がリストアップされ、最初の1つは青いチェックマークで示されるように完了とマークされている。他の2つの項目はチェックされておらず、保留中のタスクであることを示している。リストの上には、"todo title... "というプレースホルダーのテキストがある入力フィールドがあり、そこに新しいToDoアイテムのタイトルを入力できるようになっている。この入力フィールドの右側には「+」記号のボタンがあり、一般的に新しい項目をリストに追加するのに使われる。全体的にクリーンでモダンなデザインで、シンプルさと使いやすさを重視している。)
-```
+
+> The image you've uploaded appears to be a screenshot of a user interface for a to-do list application. The interface is quite minimalistic, with a dark color scheme. There are three to-do items listed, with the first one marked as completed, as indicated by the blue check mark. The other two items are not checked, implying they are pending tasks. Above the list, there is an input field with a placeholder text that says "todo title...", suggesting that you can type a new to-do item title there. To the right of this input field, there's a button with a "+" sign, commonly used to add a new item to the list. The overall design is clean and modern, focusing on simplicity and ease of use.
+> (あなたがアップロードした画像は、ToDoリストアプリケーションのユーザーインターフェイスのスクリーンショットのようです。インターフェイスは非常にミニマリスティックで、暗い色調でまとめられている。3つのToDo項目がリストアップされ、最初の1つは青いチェックマークで示されるように完了とマークされている。他の2つの項目はチェックされておらず、保留中のタスクであることを示している。リストの上には、"todo title... "というプレースホルダーのテキストがある入力フィールドがあり、そこに新しいToDoアイテムのタイトルを入力できるようになっている。この入力フィールドの右側には「+」記号のボタンがあり、一般的に新しい項目をリストに追加するのに使われる。全体的にクリーンでモダンなデザインで、シンプルさと使いやすさを重視している。)
+
 
 いい感じに理解してくれています。
 
@@ -200,12 +200,11 @@ body {
 
 ダメ出ししていきます。
 
-```
-The design is not very reproducible.
+
+> The design is not very reproducible.
 Please aim for a more perfect reproduction.
 (デザインの再現性はあまり高くありません。
-より完璧な再現を目指してください。)
-```
+より完璧な再現を目指してください。) 
 
 
 返答はこちら↓
@@ -356,7 +355,7 @@ input[type="submit"] {
 > Is it possible to display the entire background in a uniform black color now?
 > (現在、背景全体を黒一色で表示することは可能ですか？)
 
-↓
+返答はこちら↓
 
 > Yes, you can display the entire background of the page in a uniform black color by setting the background-color property of the body element to black in your CSS. Here's how you can modify your todos.css.scss file:
 > (はい、CSSでbody要素のbackground-colorプロパティを黒に設定することで、ページの背景全体を黒一色で表示することができます。ここでは、todos.css.scssファイルを修正する方法を説明します：)
@@ -393,10 +392,9 @@ body {
 
 
 > I've got this error. fix this.(このエラーが発生しました。)
-> ===
-> cannot load such file -- sassc
+> `cannot load such file -- sassc`
 
-↓
+返答はこちら↓
 
 > The error "cannot load such file -- sassc" suggests that the sassc gem, which is the Ruby bindings for the libsass library and is used for processing .scss files in Rails, is either not installed or not accessible in your environment.
 > Here are the steps to troubleshoot and fix this issue:

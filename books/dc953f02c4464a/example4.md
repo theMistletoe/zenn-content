@@ -9,22 +9,18 @@ title: "アプリの骨子を作る"
 ユーザー視点でできることを意識して、プロンプトを書いてみました。
 
 
----
 
-```
-I am looking to create a simple TODO app. The application framework to be used will be Ruby on Rails.
+> I am looking to create a simple TODO app. The application framework to be used will be Ruby on Rails.
+> Here is what you can do with this application
+> - The user can see a form to enter the title of the TODO.
+> - The user sees a + button.
+> - When the user enters text in the form to enter a TODO title and presses the + button, the TODO item with the entered title is added to the TODO list and can be viewed.
+>   - TODO items have visible titles and checkboxes.
+> - The user can click on the checkbox of a TODO item without a checkbox to save it as checked.
+> - The user can click the checkbox of a TODO item with a checkbox to save it as an unchecked state.
 
-Here is what you can do with this application
+> Please give us hands-on, step-by-step instructions on how to create an app with this kind of functionality in a way that is easy for beginners to understand!
 
-- The user can see a form to enter the title of the TODO.
-- The user sees a + button.
-- When the user enters text in the form to enter a TODO title and presses the + button, the TODO item with the entered title is added to the TODO list and can be viewed.
-  - TODO items have visible titles and checkboxes.
-- The user can click on the checkbox of a TODO item without a checkbox to save it as checked.
-- The user can click the checkbox of a TODO item with a checkbox to save it as an unchecked state.
-
-Please give us hands-on, step-by-step instructions on how to create an app with this kind of functionality in a way that is easy for beginners to understand!
-```
 
 :::details （和訳はこちら）
 
@@ -53,19 +49,18 @@ Please give us hands-on, step-by-step instructions on how to create an app with 
 
 ---
 
-Ruby on Railsを使用してこのようなTODOアプリケーションを作成するための手順は以下の通りです。
+> Ruby on Railsを使用してこのようなTODOアプリケーションを作成するための手順は以下の通りです。
+> 1. 新しいRailsアプリケーションを作成します。コマンドラインでrails > new todo_appを実行します。
+> 2. Todoモデルを作成します。 `rails generate model Todo > title:string completed:boolean` を実行します。
+> 3. データベースマイグレーションを実行します。 `rails db:migrate` を> 実行します。
+> 4. TodosControllerを作成します。`rails generate controller > Todos`を実行します。
+> 5. config/routes.rbファイルを編集して、ルートURLが> TodosControllerのindexアクションにルーティングされるようにします。
+> 6. app/views/todos/index.html.erbビューファイルを作成し、TODOの> タイトルを入力するフォームとTODOリストを表示する領域を作成します。
+> 7. TodosControllerのindexアクションで、すべてのTODOを取得し、それ> らをビューに渡します。
+> 8. TodosControllerに新しいTODOを作成するためのcreateアクションを追加します。このアクションは、フォームから送信されたパラメータを使用して新しいTODOを作成し、データベースに保存します。
+> 9. TodosControllerにTODOの完了状態を更新するためのupdateアクションを追加します。このアクションは、チェックボックスがクリックされたときに呼び出され、対応するTODOのcompleted属性を更新します。
 
-1. 新しいRailsアプリケーションを作成します。コマンドラインでrails new todo_appを実行します。
-2. Todoモデルを作成します。 `rails generate model Todo title:string completed:boolean` を実行します。
-3. データベースマイグレーションを実行します。 `rails db:migrate` を実行します。
-4. TodosControllerを作成します。`rails generate controller Todos`を実行します。
-5. config/routes.rbファイルを編集して、ルートURLがTodosControllerのindexアクションにルーティングされるようにします。
-6. app/views/todos/index.html.erbビューファイルを作成し、TODOのタイトルを入力するフォームとTODOリストを表示する領域を作成します。
-7. TodosControllerのindexアクションで、すべてのTODOを取得し、それらをビューに渡します。
-8. TodosControllerに新しいTODOを作成するためのcreateアクションを追加します。このアクションは、フォームから送信されたパラメータを使用して新しいTODOを作成し、データベースに保存します。
-9. TodosControllerにTODOの完了状態を更新するためのupdateアクションを追加します。このアクションは、チェックボックスがクリックされたときに呼び出され、対応するTODOのcompleted属性を更新します。
-
-以下に、これらの手順を詳細に説明します。
+> 以下に、これらの手順を詳細に説明します。
 
 ```ruby
 # config/routes.rb
@@ -128,8 +123,8 @@ end
 </ul>
 ```
 
-このコードは、最も基本的なTODOアプリケーションを作成します。ユーザーがTODOタイトルを入力し、+ボタンをクリックすると、新しいTODO項目がリストに追加されます。
-各TODO項目にはチェックボックスがあり、チェックボックスをクリックすると項目の完了状態が更新されます。
+> このコードは、最も基本的なTODOアプリケーションを作成します。ユーザーがTODOタイトルを入力し、+ボタンをクリックすると、新しいTODO項目がリストに追加されます。
+> 各TODO項目にはチェックボックスがあり、チェックボックスをクリックすると項目の完了状態が更新されます。
 
 
 # 結果

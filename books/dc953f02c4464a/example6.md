@@ -8,16 +8,14 @@ title: "サインアウト機能の実装"
 指示するプロントは以下のとおりです。
 
 
-```
-This creates a basic user authentication function! Thank you very much!
 
-Next, I would like to add a sign-out function.
+> This creates a basic user authentication function! Thank you very much!
+> Next, I would like to add a sign-out function.
 The detailed functionality is as follows.
+> - Users can sign out.
+> 
+> Please give us the specific hands-on steps to achieve the functionality in a step-by-step manner that is easy for a beginner to understand.
 
-- Users can sign out.
-
-Please give us the specific hands-on steps to achieve the functionality in a step-by-step manner that is easy for a beginner to understand.
-```
 
 
 :::details （和訳はこちら）
@@ -38,11 +36,11 @@ Please give us the specific hands-on steps to achieve the functionality in a ste
 
 ---
 
-Devise gemを使用している場合、ログアウト機能はデフォルトで提供されています。ログアウトリンクを追加することで、ユーザーがログアウトできるようになります。
-
-以下に、ログアウトリンクを追加する手順を示します。
-
-ビューにログアウトリンクを追加します。以下のコードを適切な場所（例えばヘッダーやナビゲーションメニューなど）に追加します。
+> Devise gemを使用している場合、ログアウト機能はデフォルトで提供されています。ログアウトリンクを追加することで、ユーザーがログアウトできるようになります。
+> 
+> 以下に、ログアウトリンクを追加する手順を示します。
+> 
+> ビューにログアウトリンクを追加します。以下のコードを適切な場所（例えばヘッダーやナビゲーションメニューなど）に追加します。
 
 
 ```
@@ -54,9 +52,8 @@ Devise gemを使用している場合、ログアウト機能はデフォルト�
 <% end %>
 ```
 
-このコードは、ユーザーがログインしている場合は「Sign out」リンクを、ログインしていない場合は「Sign in」と「Sign up」リンクを表示します。
-
-以上で、ログアウト機能が追加されます。
+> このコードは、ユーザーがログインしている場合は「Sign out」リンクを、ログインしていない場合は「Sign in」と「Sign up」リンクを表示します。
+> 以上で、ログアウト機能が追加されます。
 
 # 追加の修正指示を仰ぐ
 
@@ -65,9 +62,9 @@ Gemで提供されているサインアウト機能を利用するようViewを�
 
 ので、聞いてみましょう。
 
-```
-Please let me know specifically which files I should modify and how.
-```
+
+> Please let me know specifically which files I should modify and how.
+
 
 :::details （和訳はこちら）
 どのファイルをどのように修正すればいいのか、具体的に教えてください。
@@ -83,9 +80,9 @@ Please let me know specifically which files I should modify and how.
 
 ---
 
-ログアウトリンクを追加するためには、通常、アプリケーションのレイアウトファイルを編集します。このファイルは通常、app/views/layouts/application.html.erbにあります。
+> ログアウトリンクを追加するためには、通常、アプリケーションのレイアウトファイルを編集します。このファイルは通常、app/views/layouts/application.html.erbにあります。
 
-以下のコードをこのファイルの<body>タグ内に追加します。適切な場所に追加してください（例えば、ヘッダーやナビゲーションメニューなど）。
+> 以下のコードをこのファイルの<body>タグ内に追加します。適切な場所に追加してください（例えば、ヘッダーやナビゲーションメニューなど）。
 
 
 ```
@@ -97,9 +94,8 @@ Please let me know specifically which files I should modify and how.
 <% end %>
 ```
 
-このコードは、ユーザーがログインしている場合は「Sign out」リンクを、ログインしていない場合は「Sign in」と「Sign up」リンクを表示します。
-
-以上で、ログアウト機能が追加されます。
+> このコードは、ユーザーがログインしている場合は「Sign out」リンクを、ログインしていない場合は「Sign in」と「Sign up」リンクを表示します。
+> 以上で、ログアウト機能が追加されます。
 
 
 # エラーの修正
@@ -108,11 +104,9 @@ Please let me know specifically which files I should modify and how.
 指示された修正を適応したところ、エラーが発生してしまいました。
 このエラーも修正していきます。
 
-```
-The following error occurred Please tell me exactly how to correct it.
 
-No route matches [GET] "/users/sign_out"
-```
+> The following error occurred Please tell me exactly how to correct it.
+> No route matches [GET] "/users/sign_out"
 
 :::details （和訳はこちら）
 以下のエラーが発生しました。修正方法を教えてください。
@@ -128,26 +122,22 @@ No route matches [GET] "/users/sign_out"
 ---
 
 
-このエラーは、Deviseのデフォルト設定ではログアウトリンクがDELETEリクエストを期待しているのに対し、ブラウザがGETリクエストを送信しているために発生しています。
+> このエラーは、Deviseのデフォルト設定ではログアウトリンクがDELETEリクエストを期待しているのに対し、ブラウザがGETリクエストを送信しているために発生しています。
+> この問題を解決するためには、Deviseの設定を変更して、ログアウトリンクに対するGETリクエストを許可する必要があります。
 
-この問題を解決するためには、Deviseの設定を変更して、ログアウトリンクに対するGETリクエストを許可する必要があります。
-
-以下の手順で設定を変更します。
-
-1. config/initializers/devise.rb ファイルを開きます。
-
-2. 以下の行を探します。
-
-3. この行のコメントアウトを解除（#を削除）し、:deleteを:getに変更します。
+> 以下の手順で設定を変更します。
+> 1. config/initializers/devise.rb ファイルを開きます。
+> 2. 以下の行を探します。
+> 3. この行のコメントアウトを解除（#を削除）し、:deleteを:getに変更します。
 
 ```
 config.sign_out_via = :get
 ```
 
-4. 変更を保存し、Railsサーバーを再起動します。
+> 4. 変更を保存し、Railsサーバーを再起動します。
 
 
-以上の変更により、ログアウトリンクに対するGETリクエストが許可され、エラーが解消されるはずです。
+> 以上の変更により、ログアウトリンクに対するGETリクエストが許可され、エラーが解消されるはずです。
 
 
 ---
