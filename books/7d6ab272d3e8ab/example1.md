@@ -2,6 +2,9 @@
 title: "一旦全部ここに書く"
 ---
 
+<!-- 最初にTODOリストを整理したい -->
+
+
 ではまずはどこからコードを書いていきましょうか。
 もちろんテストコードから書いていきます。
 
@@ -256,7 +259,6 @@ import { render } from '@testing-library/react';
 import { DateBox } from '@/components/calendar/DateBox';
 
 describe('DateBox', () => {
-  # TODO: ここをDate型に
   it('数字の1を渡すと、1が見える', () => {
     const { getByText } = render(<DateBox dateNumber={1} />);
     const dateText = getByText('1');
@@ -279,5 +281,47 @@ describe('DateBox', () => {
 });
 ```
 
+これでskipを除き、すべてのテストがGREENになりました。
 
+この状態で、Date型を利用するように修正していきましょう。
+まずはインターフェースを修正し、REDの状態にしましょう。
+
+```diff ts:DateBox.spec.tsx
+import React from 'react';
+import { render } from '@testing-library/react';
+import { DateBox } from '@/components/calendar/DateBox';
+
+describe('DateBox', () => {
+
+-  it('数字の1を渡すと、1が見える', () => {
+-    const { getByText } = render(<DateBox dateNumber={1} />);
+-    const dateText = getByText('1');
++  it('2023/5/21を渡すと、21が見える', () => {
++    const date = new Date("2023-05-21");
++    const { getByText } = render(<DateBox date={date} />);
++    const dateText = getByText('21');
+    expect(dateText).toBeInTheDocument();
+  });
+
+-  it('数字の2を渡すと、2が見える', () => {
+-    const { getByText } = render(<DateBox dateNumber={2} /);
+-    const dateText = getByText('2');
++  it('2024/6/1を渡すと、1が見える', () => {
++    const date = new Date("2024-06-01");
++    const { getByText } = render(<DateBox date={date} />);
++    const dateText = getByText('1');
+    expect(dateText).toBeInTheDocument();
+  });
+
+  it.skip('日付を指定すると、曜日が見える', () => {
+    const date = new Date("2023-05-21");
+    const { getByText } = render(<DateBox date={date} />);
+    const dayOfWeek = getByText('日');
+    expect(dayOfWeek).toBeInTheDocument();
+  });
+});
+```
+
+これでインターフェースをDate型に変える準備が整いました。
+それでは実装に入っていきます。GREENにしていきましょう。
 
