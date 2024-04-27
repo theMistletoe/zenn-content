@@ -13,6 +13,9 @@ title: "はじめのTDDサイクル"
 こちらのテストコードから書いていきましょう。
 
 
+# RED
+
+
 `__tests__/components/calendar/DateBox.spec.tsx`を作成し、テストコードを書いていきます。
 
 ```ts:DateBox.spec.tsx
@@ -50,7 +53,7 @@ export function DateBox({dateNumber}: {dateNumber: number}) {
 
 これでコンポーネントをインポート可能になり、想定通りテストがREDで失敗する状態になりました。
 
----
+# GREEN
 
 では、次にGREENにしていきます。
 
@@ -102,7 +105,7 @@ export function DateBox({dateNumber}: {dateNumber: number}) {
 
 
 
-
+# リファクタリング
 
 さて、RED→GREENときたら、次はリファクタリングです。
 
